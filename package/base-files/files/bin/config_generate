@@ -314,7 +314,6 @@ generate_static_system() {
 
 	if json_is_a system object; then
 		json_select system
-
 			local compat_version
 			if json_get_var compat_version compat_version; then
 				uci -q set "system.@system[-1].compat_version=$compat_version"

@@ -314,10 +314,6 @@ generate_static_system() {
 
 	if json_is_a system object; then
 		json_select system
-			local hostname
-			if json_get_var hostname hostname; then
-				uci -q set "system.@system[-1].hostname=$hostname"
-			fi
 
 			local compat_version
 			if json_get_var compat_version compat_version; then
